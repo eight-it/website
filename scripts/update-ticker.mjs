@@ -149,12 +149,22 @@ function renderList(items, focusable, hidden) {
 }
 
 async function main() {
-  const fetched = (await Promise.all(FEEDS.map(fetchFeed))).flat();
-  const items = [...fetched, ...STATIC_ITEMS];
+  const fetchedGroups = await Promise.all(FEEDS.map(fetchFeed));
 
-  if (fetched.length === 0) {
+  if (fetchedGroups.every(g => g.length === 0)) {
     console.error('[ticker] All feeds failed. Aborting; existing HTML left untouched.');
     process.exit(1);
+  }
+
+  // Round-robin interleave so consecutive items don't share a source.
+  // Static items are folded in as another group so they get woven in too.
+  const groups = [...fetchedGroups, STATIC_ITEMS];
+  const maxLen = Math.max(...groups.map(g => g.length));
+  const items = [];
+  for (let i = 0; i < maxLen; i++) {
+    for (const group of groups) {
+      if (group[i]) items.push(group[i]);
+    }
   }
 
   const block = `${MARKER_START}\n${renderList(items, true, false)}\n${renderList(items, false, true)}\n        ${MARKER_END}`;
