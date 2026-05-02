@@ -2,8 +2,10 @@ name: Update status ticker
 
 on:
   schedule:
-    # Daily at 14:00 UTC = 6am Pacific (7am during PDT)
-    - cron: '0 14 * * *'
+    # 15:00 UTC = 8am PDT / 7am PST
+    - cron: '0 15 * * *'
+    # 00:00 UTC = 5pm PDT / 4pm PST (the day before)
+    - cron: '0 0 * * *'
   workflow_dispatch: {}
 
 jobs:
