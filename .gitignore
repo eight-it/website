@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# Local-only build artifacts (no longer needed once auto-deployed via Git)
+production/
+production.zip
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+
+# Local Claude Code config
+.claude/
+
+# npm artifacts (only used for the local OG image build, not needed on CI)
+package.json
+package-lock.json
