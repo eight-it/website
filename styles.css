@@ -654,6 +654,7 @@ section { padding-block: var(--space-20); }
 .status-source-cisa { color: var(--accent-text); background: rgba(29, 78, 216, 0.10); }
 .status-source-ms   { color: #166534; background: rgba(34, 139, 34, 0.10); }
 .status-source-sec  { color: #b91c1c; background: rgba(185, 28, 28, 0.10); }
+.status-source-nist { color: #6d28d9; background: rgba(124, 58, 237, 0.10); }
 .status-headline {
   color: var(--fg);
   font-weight: 500;
@@ -665,13 +666,15 @@ section { padding-block: var(--space-20); }
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
-:root[data-theme="dark"] .status-source-cf  { color: #fdba74; background: rgba(243, 128, 32, 0.16); }
-:root[data-theme="dark"] .status-source-ms  { color: #86efac; background: rgba(34, 139, 34, 0.16); }
-:root[data-theme="dark"] .status-source-sec { color: #fca5a5; background: rgba(185, 28, 28, 0.18); }
+:root[data-theme="dark"] .status-source-cf   { color: #fdba74; background: rgba(243, 128, 32, 0.16); }
+:root[data-theme="dark"] .status-source-ms   { color: #86efac; background: rgba(34, 139, 34, 0.16); }
+:root[data-theme="dark"] .status-source-sec  { color: #fca5a5; background: rgba(185, 28, 28, 0.18); }
+:root[data-theme="dark"] .status-source-nist { color: #c4b5fd; background: rgba(124, 58, 237, 0.18); }
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .status-source-cf  { color: #fdba74; background: rgba(243, 128, 32, 0.16); }
-  :root:not([data-theme="light"]) .status-source-ms  { color: #86efac; background: rgba(34, 139, 34, 0.16); }
-  :root:not([data-theme="light"]) .status-source-sec { color: #fca5a5; background: rgba(185, 28, 28, 0.18); }
+  :root:not([data-theme="light"]) .status-source-cf   { color: #fdba74; background: rgba(243, 128, 32, 0.16); }
+  :root:not([data-theme="light"]) .status-source-ms   { color: #86efac; background: rgba(34, 139, 34, 0.16); }
+  :root:not([data-theme="light"]) .status-source-sec  { color: #fca5a5; background: rgba(185, 28, 28, 0.18); }
+  :root:not([data-theme="light"]) .status-source-nist { color: #c4b5fd; background: rgba(124, 58, 237, 0.18); }
 }
 @media (prefers-reduced-motion: reduce) {
   .status-ticker-track { animation: none; }

@@ -34,6 +34,32 @@ const FEEDS = [
     fallbackHref: 'https://www.bleepingcomputer.com/',
     limit: 2,
   },
+  {
+    source: 'NIST',
+    cssClass: 'status-source-nist',
+    type: 'json',
+    url: () => {
+      // NVD API requires literal colons (no %3A encoding) and both pubStartDate + pubEndDate, no Z suffix.
+      const fmt = (d) => new Date(d).toISOString().replace('Z', '');
+      const start = fmt(Date.now() - 7 * 86_400_000);
+      const end = fmt(Date.now());
+      return `https://services.nvd.nist.gov/rest/json/cves/2.0?pubStartDate=${start}&pubEndDate=${end}&resultsPerPage=20`;
+    },
+    fallbackHref: 'https://nvd.nist.gov/vuln/search',
+    limit: 2,
+    parse: (json) => {
+      const vulns = json.vulnerabilities || [];
+      vulns.sort((a, b) => new Date(b.cve.published) - new Date(a.cve.published));
+      return vulns.map(v => {
+        const desc = (v.cve.descriptions || []).find(d => d.lang === 'en')?.value || '';
+        return {
+          title: `${v.cve.id}: ${desc}`,
+          link: `https://nvd.nist.gov/vuln/detail/${v.cve.id}`,
+          date: v.cve.published,
+        };
+      });
+    },
+  },
 ];
 
 // Microsoft 365 has no public RSS — pinned static item that links to its status page.
@@ -113,12 +139,19 @@ function truncate(s, n) {
 
 async function fetchFeed(feed) {
   try {
-    const res = await fetch(feed.url, {
+    const url = typeof feed.url === 'function' ? feed.url() : feed.url;
+    const res = await fetch(url, {
       headers: { 'User-Agent': 'eightit-ticker/1.0 (+https://eightit.com)' },
     });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const xml = await res.text();
-    const items = parseRss(xml, feed.limit);
+    let items;
+    if (feed.type === 'json') {
+      const json = await res.json();
+      items = feed.parse(json).slice(0, feed.limit);
+    } else {
+      const xml = await res.text();
+      items = parseRss(xml, feed.limit);
+    }
     if (items.length === 0) console.warn(`[ticker] ${feed.source}: feed parsed empty`);
     return items.map(it => ({
       source: feed.source,
