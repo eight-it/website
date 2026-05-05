@@ -1,6 +1,6 @@
 import { EmailMessage } from 'cloudflare:email';
 
-const SENDER    = 'noreply@eightit.com';
+const SENDER    = 'noreply@forms.eightit.com';
 const RECIPIENT = 'info@eightit.com';
 
 function sanitizeHeader(s) {
