@@ -1,28 +1,5 @@
-import { EmailMessage } from 'cloudflare:email';
-
 const SENDER    = 'noreply@forms.eightit.com';
 const RECIPIENT = 'info@eightit.com';
-
-function sanitizeHeader(s) {
-  return String(s).replace(/[\r\n]/g, ' ').trim().slice(0, 200);
-}
-
-function buildRaw({ name, email, message }) {
-  return [
-    'MIME-Version: 1.0',
-    `Date: ${new Date().toUTCString()}`,
-    `From: Eight IT Website <${SENDER}>`,
-    `Reply-To: ${sanitizeHeader(name)} <${sanitizeHeader(email)}>`,
-    `To: ${RECIPIENT}`,
-    `Subject: New contact from ${sanitizeHeader(name)}`,
-    'Content-Type: text/plain; charset=utf-8',
-    '',
-    `Name: ${name}`,
-    `Email: ${email}`,
-    '',
-    message,
-  ].join('\r\n');
-}
 
 export async function onRequestPost(context) {
   try {
@@ -38,13 +15,30 @@ export async function onRequestPost(context) {
       return Response.json({ ok: false, error: 'Please enter a valid email address.' }, { status: 400 });
     }
 
-    if (!context.env.EMAIL) {
-      // Binding not configured — return success so the form can be tested visually
+    if (!context.env.RESEND_API_KEY) {
       return Response.json({ ok: true });
     }
 
-    const msg = new EmailMessage(SENDER, RECIPIENT, buildRaw({ name, email, message }));
-    await context.env.EMAIL.send(msg);
+    const res = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${context.env.RESEND_API_KEY}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        from: `Eight IT Website <${SENDER}>`,
+        to: RECIPIENT,
+        reply_to: `${name} <${email}>`,
+        subject: `New contact from ${name}`,
+        text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
+      }),
+    });
+
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      console.error('[contact]', res.status, err);
+      return Response.json({ ok: false, error: 'Something went wrong. Please try again.' }, { status: 500 });
+    }
 
     return Response.json({ ok: true });
   } catch (err) {
