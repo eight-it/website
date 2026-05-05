@@ -483,5 +483,32 @@
     })();
   </script>
 
+  <script>
+    (function () {
+      function esc(s) {
+        return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+      }
+      function item(it, focusable) {
+        var target = focusable ? ' target="_blank" rel="noopener noreferrer"' : '';
+        var tab    = focusable ? '' : ' tabindex="-1"';
+        return '<li><a class="status-item" href="' + esc(it.href) + '"' + target + tab + '>' +
+          '<span class="status-source ' + esc(it.cssClass) + '">' + esc(it.source) + '</span>' +
+          '<span class="status-headline">' + esc(it.headline) + '</span>' +
+          '<span class="status-time">' + esc(it.time || '') + '</span>' +
+          '</a></li>';
+      }
+      fetch('/api/ticker')
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (items) {
+          if (!items || !items.length) return;
+          var lists = document.querySelectorAll('.status-ticker-list');
+          if (lists.length < 2) return;
+          lists[0].innerHTML = items.map(function (it) { return item(it, true);  }).join('');
+          lists[1].innerHTML = items.map(function (it) { return item(it, false); }).join('');
+        })
+        .catch(function () {});
+    }());
+  </script>
+
 </body>
 </html>
