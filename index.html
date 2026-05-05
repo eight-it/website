@@ -350,15 +350,28 @@
           <p class="eyebrow" style="justify-content: center;"><span class="num">03</span> Contact</p>
           <h2 class="heading-section" id="contact-heading">Let's talk about what you need.</h2>
           <p class="lede">Whether you're looking for ongoing IT management or help with a specific project, we'd like to hear from you.</p>
-          <div class="contact-actions">
-            <a href="mailto:info@eightit.com" class="btn btn-primary">
-              Email info@eightit.com
-              <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-            </a>
-            <a href="https://www.linkedin.com/company/eightit" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
-              LinkedIn<span class="sr-only"> (opens in a new tab)</span>
-            </a>
-          </div>
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="form-group">
+              <label class="form-label" for="cf-name">Name</label>
+              <input class="form-input" type="text" id="cf-name" name="name" autocomplete="name" required placeholder="Your name">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="cf-email">Email</label>
+              <input class="form-input" type="email" id="cf-email" name="email" autocomplete="email" required placeholder="you@example.com">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="cf-message">Message</label>
+              <textarea class="form-input" id="cf-message" name="message" rows="5" required placeholder="Tell us what you need…"></textarea>
+            </div>
+            <div class="form-footer">
+              <button type="submit" class="btn btn-primary" id="cf-submit">
+                <span id="cf-submit-text">Send message</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+              </button>
+              <p class="form-alt">Or <a href="https://www.linkedin.com/company/eightit" target="_blank" rel="noopener noreferrer">connect on LinkedIn<span class="sr-only"> (opens in a new tab)</span></a></p>
+            </div>
+            <div class="form-status" id="cf-status" role="status" aria-live="polite" aria-atomic="true"></div>
+          </form>
         </div>
       </div>
     </section>
@@ -481,6 +494,43 @@
       }
 
     })();
+  </script>
+
+  <script>
+    (function () {
+      var form   = document.getElementById('contact-form');
+      var submit = document.getElementById('cf-submit');
+      var label  = document.getElementById('cf-submit-text');
+      var status = document.getElementById('cf-status');
+      if (!form) return;
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        status.textContent = '';
+        status.className = 'form-status';
+        submit.disabled = true;
+        label.textContent = 'Sending…';
+        fetch('/api/contact', { method: 'POST', body: new FormData(form) })
+          .then(function (r) { return r.json(); })
+          .then(function (d) {
+            if (d.ok) {
+              form.reset();
+              status.textContent = 'Message sent! We\'ll be in touch shortly.';
+              status.className = 'form-status success';
+            } else {
+              status.textContent = d.error || 'Something went wrong. Please try again.';
+              status.className = 'form-status error';
+            }
+          })
+          .catch(function () {
+            status.textContent = 'Something went wrong. Please try again.';
+            status.className = 'form-status error';
+          })
+          .finally(function () {
+            submit.disabled = false;
+            label.textContent = 'Send message';
+          });
+      });
+    }());
   </script>
 
   <script>
