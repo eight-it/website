@@ -114,17 +114,17 @@
 
           <article class="service-item">
             <h3>Third-Party Vendor Management</h3>
-            <p>We coordinate and manage third-party vendors to ensure your technology needs are promptly and efficiently met.</p>
+            <p>One point of contact for every technology vendor. We own the relationship, track the deliverables, and push back when something isn't right.</p>
           </article>
 
           <article class="service-item">
             <h3>VoIP and ISP Management</h3>
-            <p>We manage and maintain your organization's VoIP and Internet Service Provider systems to ensure optimal performance.</p>
+            <p>Carrier contracts, provisioning, outages, and day-to-day performance &mdash; handled. You make calls; we deal with the providers.</p>
           </article>
 
           <article class="service-item">
             <h3>Asset and Inventory Management</h3>
-            <p>Comprehensive tracking and management of your technology assets and inventory to keep your systems running smoothly.</p>
+            <p>Full tracking of your technology assets and inventory &mdash; what you have, where it is, and when it needs replacing.</p>
           </article>
 
           <article class="service-item">
@@ -139,7 +139,7 @@
 
           <article class="service-item">
             <h3>Database Administration, Maintenance, and Migration</h3>
-            <p>Comprehensive support for your databases &mdash; administration, maintenance, and migration between platforms.</p>
+            <p>Administration, maintenance, and platform migrations for your databases &mdash; keeping them healthy and moving them when you need to.</p>
           </article>
 
           <article class="service-item">
@@ -169,7 +169,7 @@
 
           <article class="service-item">
             <h3>Network Optimization, Performance Troubleshooting, and Documentation</h3>
-            <p>We optimize and troubleshoot your network for performance, and produce comprehensive infrastructure documentation.</p>
+            <p>We find and fix performance bottlenecks, troubleshoot connectivity issues, and produce accurate infrastructure documentation that reflects how your network actually works.</p>
           </article>
 
           <article class="service-item">
@@ -189,7 +189,7 @@
 
           <article class="service-item">
             <h3>Personalized One-on-One Training</h3>
-            <p>Customized training so your team has the skills and knowledge to effectively use your technology systems.</p>
+            <p>Hands-on training tailored to your team and your actual systems &mdash; not generic software walkthroughs.</p>
           </article>
 
           <article class="service-item">
@@ -199,12 +199,12 @@
 
           <article class="service-item">
             <h3>Server Preventive Maintenance, Optimization, Support, and Virtualization</h3>
-            <p>Comprehensive server support including preventive maintenance, optimization, and virtualization.</p>
+            <p>Scheduled maintenance, performance tuning, and virtualization for your server environment &mdash; handled before problems surface, not after.</p>
           </article>
 
           <article class="service-item">
             <h3>System Administration and End-User Support</h3>
-            <p>System administration and end-user support to keep your environment running smoothly day-to-day.</p>
+            <p>Day-to-day system administration and user support &mdash; account management, permissions, troubleshooting, and everything else that keeps the environment running.</p>
           </article>
 
           <article class="service-item">
@@ -216,17 +216,34 @@
       </div>
     </section>
 
-    <section class="contact" id="contact" aria-labelledby="contact-heading">
+    <section class="section-tinted contact" id="contact" aria-labelledby="contact-heading">
       <div class="container">
-        <p class="eyebrow" style="justify-content: center;">Contact</p>
-        <h2 class="heading-section" id="contact-heading">Need something not on this list?</h2>
-        <p class="lede">If you don't see what you're looking for, ask. Most IT problems we handle every day; the unusual ones are usually still in our wheelhouse.</p>
-        <div class="contact-actions">
-          <a href="mailto:info@eightit.com" class="btn btn-primary">
-            Email info@eightit.com
-            <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-          </a>
-          <a href="/" class="btn btn-secondary">Back to home</a>
+        <div>
+          <p class="eyebrow" style="justify-content: center;">Contact</p>
+          <h2 class="heading-section" id="contact-heading">Need something not on this list?</h2>
+          <p class="lede">If you don't see what you're looking for, ask. Most IT problems we handle every day; the unusual ones usually aren't outside our scope.</p>
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="form-group">
+              <label class="form-label" for="cf-name">Name</label>
+              <input class="form-input" type="text" id="cf-name" name="name" autocomplete="name" required placeholder="Your name">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="cf-email">Email</label>
+              <input class="form-input" type="email" id="cf-email" name="email" autocomplete="email" required placeholder="you@example.com">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="cf-message">Message</label>
+              <textarea class="form-input" id="cf-message" name="message" rows="5" required placeholder="Tell us what you need…"></textarea>
+            </div>
+            <div class="form-footer">
+              <button type="submit" class="btn btn-primary" id="cf-submit">
+                <span id="cf-submit-text">Send message</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+              </button>
+              <p class="form-alt">Or <a href="https://www.linkedin.com/company/eight-it" target="_blank" rel="noopener noreferrer">connect on LinkedIn<span class="sr-only"> (opens in a new tab)</span></a></p>
+            </div>
+            <div class="form-status" id="cf-status" role="status" aria-live="polite" aria-atomic="true"></div>
+          </form>
         </div>
       </div>
     </section>
@@ -287,6 +304,43 @@
         });
       }
     })();
+  </script>
+
+  <script>
+    (function () {
+      var form   = document.getElementById('contact-form');
+      var submit = document.getElementById('cf-submit');
+      var label  = document.getElementById('cf-submit-text');
+      var status = document.getElementById('cf-status');
+      if (!form) return;
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        status.textContent = '';
+        status.className = 'form-status';
+        submit.disabled = true;
+        label.textContent = 'Sending…';
+        fetch('/api/contact', { method: 'POST', body: new FormData(form) })
+          .then(function (r) { return r.json(); })
+          .then(function (d) {
+            if (d.ok) {
+              form.reset();
+              status.textContent = 'Message sent! We\'ll be in touch shortly.';
+              status.className = 'form-status success';
+            } else {
+              status.textContent = d.error || 'Something went wrong. Please try again.';
+              status.className = 'form-status error';
+            }
+          })
+          .catch(function () {
+            status.textContent = 'Something went wrong. Please try again.';
+            status.className = 'form-status error';
+          })
+          .finally(function () {
+            submit.disabled = false;
+            label.textContent = 'Send message';
+          });
+      });
+    }());
   </script>
 </body>
 </html>

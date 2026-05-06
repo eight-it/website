@@ -1205,6 +1205,7 @@ time,
     grid-template-columns: 1fr;
     gap: var(--space-12);
   }
+  .hero-visual { display: none; }
   .media-frame { aspect-ratio: 16 / 10; }
   .split-grid .media-frame { order: -1; }
 
