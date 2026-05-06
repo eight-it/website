@@ -842,6 +842,7 @@ section { padding-block: var(--space-20); }
 }
 .form-input::placeholder { color: var(--fg-subtle); }
 textarea.form-input { resize: vertical; min-height: 120px; }
+.cf-turnstile { margin-top: var(--space-4); }
 .form-footer {
   margin-top: var(--space-6);
   display: flex;

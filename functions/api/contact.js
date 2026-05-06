@@ -4,6 +4,12 @@ const RECIPIENT = 'info@eightit.com';
 export async function onRequestPost(context) {
   try {
     const form    = await context.request.formData();
+
+    const honeypot = (form.get('website') || '').trim();
+    if (honeypot) {
+      return Response.json({ ok: true });
+    }
+
     const name    = (form.get('name')    || '').trim();
     const email   = (form.get('email')   || '').trim();
     const message = (form.get('message') || '').trim();
@@ -13,6 +19,24 @@ export async function onRequestPost(context) {
     }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return Response.json({ ok: false, error: 'Please enter a valid email address.' }, { status: 400 });
+    }
+
+    const turnstileToken = (form.get('cf-turnstile-response') || '').trim();
+    const turnstileSecret = context.env.TURNSTILE_SECRET_KEY;
+    if (turnstileSecret) {
+      if (!turnstileToken) {
+        return Response.json({ ok: false, error: 'Please complete the verification challenge.' }, { status: 400 });
+      }
+      const verifyRes = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ secret: turnstileSecret, response: turnstileToken }),
+      });
+      const verifyData = await verifyRes.json();
+      if (!verifyData.success) {
+        console.error('[contact] Turnstile failed', verifyData);
+        return Response.json({ ok: false, error: 'Verification failed. Please try again.' }, { status: 400 });
+      }
     }
 
     if (!context.env.RESEND_API_KEY) {
