@@ -309,6 +309,16 @@ section { padding-block: var(--space-20); }
   text-align: center;
   width: 100%;
 }
+.logo .logo-spinner .strip > span:nth-child(1)::before { content: "⠋"; }
+.logo .logo-spinner .strip > span:nth-child(2)::before { content: "⠙"; }
+.logo .logo-spinner .strip > span:nth-child(3)::before { content: "⠹"; }
+.logo .logo-spinner .strip > span:nth-child(4)::before { content: "⠸"; }
+.logo .logo-spinner .strip > span:nth-child(5)::before { content: "⠼"; }
+.logo .logo-spinner .strip > span:nth-child(6)::before { content: "⠴"; }
+.logo .logo-spinner .strip > span:nth-child(7)::before { content: "⠦"; }
+.logo .logo-spinner .strip > span:nth-child(8)::before { content: "⠧"; }
+.logo .logo-spinner .strip > span:nth-child(9)::before { content: "⠇"; }
+.logo .logo-spinner .strip > span:nth-child(10)::before { content: "⠏"; }
 @keyframes logo-spin {
   from { transform: translateY(0); }
   to { transform: translateY(-10em); }
