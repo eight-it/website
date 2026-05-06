@@ -22,11 +22,11 @@
   </g>
 
   <!-- logo lockup: wordmarkSize=160, spinnerSize=147 (×0.92), wordmarkBaseline=290
-       spinnerBaseline=277, dot r=10, col spacing=44
-       row 1 cy=179, row 2 cy=218, cx left=90, cx right=134 -->
+       spinnerBaseline=277, dot r=10, col spacing=row spacing=44
+       row 1 cy=179, row 2 cy=223, cx left=90, cx right=134 -->
   <circle cx="90"  cy="179" r="10" fill="#93c5fd"/>
   <circle cx="134" cy="179" r="10" fill="#93c5fd"/>
-  <circle cx="90"  cy="218" r="10" fill="#93c5fd"/>
+  <circle cx="90"  cy="223" r="10" fill="#93c5fd"/>
 
   <!-- wordmark -->
   <text x="158" y="290" fill="#f3f4f6" font-family="Inter, Arial, sans-serif" font-weight="900" font-size="160" letter-spacing="-5">Eight<tspan fill="#93c5fd">IT</tspan></text>
