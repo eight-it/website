@@ -38,7 +38,7 @@
   <script>
     (function() {
       try {
-        if (localStorage.getItem('fonts') === 'system') return;
+        if (localStorage.getItem('consent') !== 'accept') return;
       } catch(e) { return; }
       var h = document.head, l;
       l = document.createElement('link'); l.rel = 'preconnect'; l.href = 'https://fonts.googleapis.com'; h.appendChild(l);

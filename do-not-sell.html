@@ -33,7 +33,7 @@
   <script>
     (function() {
       try {
-        if (localStorage.getItem('fonts') === 'system') return;
+        if (localStorage.getItem('consent') !== 'accept') return;
       } catch(e) { return; }
       var h = document.head, l;
       l = document.createElement('link'); l.rel = 'preconnect'; l.href = 'https://fonts.googleapis.com'; h.appendChild(l);
@@ -73,7 +73,7 @@
     <p>The only personal information we collect through this website is what you voluntarily provide via our contact form: your name, email address, and message. We use this solely to respond to your inquiry. For full details on our data handling practices, see our <a href="/privacy.html">Privacy Policy</a>.</p>
 
     <h2>Third-party services</h2>
-    <p>This site is hosted on Cloudflare and loads fonts from Google Fonts. Neither constitutes a "sale" or "sharing" of personal information under CCPA/CPRA. We do not use analytics, advertising, or tracking technologies.</p>
+    <p>This site is hosted on Cloudflare. After you accept the privacy notice, it can additionally load the Inter typeface from Google Fonts and Cloudflare Turnstile (anti-spam protection on contact forms). Until you accept, neither is loaded. None of these constitutes a "sale" or "sharing" of personal information under CCPA/CPRA. We do not use analytics, advertising, or tracking technologies.</p>
 
     <h2>Your rights under CCPA/CPRA</h2>
     <p>California residents have the right to:</p>
