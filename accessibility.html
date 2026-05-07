@@ -35,10 +35,19 @@
     })();
   </script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <script>
+    (function() {
+      try {
+        if (localStorage.getItem('fonts') === 'system') return;
+      } catch(e) { return; }
+      var h = document.head, l;
+      l = document.createElement('link'); l.rel = 'preconnect'; l.href = 'https://fonts.googleapis.com'; h.appendChild(l);
+      l = document.createElement('link'); l.rel = 'preconnect'; l.href = 'https://fonts.gstatic.com'; l.crossOrigin = ''; h.appendChild(l);
+      l = document.createElement('link'); l.rel = 'stylesheet'; l.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap'; h.appendChild(l);
+    })();
+  </script>
   <link rel="stylesheet" href="/styles.css">
+  <script src="/consent.js" defer></script>
 </head>
 <body>
 
@@ -107,6 +116,7 @@
         <a href="/downloads.html">Downloads</a>
         <a href="/accessibility.html">Accessibility</a>
         <a href="/privacy.html">Privacy</a>
+        <a href="/do-not-sell.html">Do Not Sell</a>
         <a href="https://www.linkedin.com/company/eight-it" target="_blank" rel="noopener noreferrer">LinkedIn<span class="sr-only"> (opens in a new tab)</span></a>
       </div>
     </div>
