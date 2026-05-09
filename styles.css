@@ -31,7 +31,7 @@
   /* Semantic */
   --fg:        var(--gray-900);
   --fg-muted:  var(--gray-600);
-  --fg-subtle: var(--gray-500);
+  --fg-subtle: #5b6573;
   --bg:        #ffffff;
   --bg-alt:    #f1f3f7;
   --bg-tinted: var(--blue-50);
