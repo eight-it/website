@@ -46,6 +46,7 @@
       l = document.createElement('link'); l.rel = 'stylesheet'; l.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap'; h.appendChild(l);
     })();
   </script>
+  <link rel="preload" as="image" href="/images/hero-rack.jpg" fetchpriority="high">
   <link rel="stylesheet" href="/styles.css">
   <script src="/consent.js" defer></script>
 
@@ -114,12 +115,12 @@
 
   <main id="main">
 
-    <section class="hero" style="padding-block: var(--space-20) var(--space-12);" aria-labelledby="services-heading">
+    <section class="hero" aria-labelledby="services-heading" style="background-image: url('/images/hero-rack.jpg');">
       <div class="container">
-        <div style="max-width: 720px;">
-          <p class="eyebrow" style="margin-bottom: var(--space-4);">Services</p>
+        <div class="hero-content" style="max-width: 720px;">
+          <p class="eyebrow">Services</p>
           <h1 class="heading-display" id="services-heading" style="font-size: clamp(2rem, 1.4rem + 2.5vw, 3rem);">Managed IT, Security &amp; Support<br>for Los&nbsp;Angeles businesses</h1>
-          <p class="lede" style="margin-top: var(--space-5);">A full IT department's worth of capability. Whatever your organization needs to keep running &mdash; infrastructure, security, support, recovery, training &mdash; we handle it. Below is the full catalog of services we offer to clients across Los Angeles, Riverside, and Orange counties.</p>
+          <p class="lede">A full IT department's worth of capability. Whatever your organization needs to keep running &mdash; infrastructure, security, support, recovery, training &mdash; we handle it. Below is the full catalog of services we offer to clients across Los Angeles, Riverside, and Orange counties.</p>
         </div>
       </div>
     </section>

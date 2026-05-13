@@ -46,6 +46,7 @@
       l = document.createElement('link'); l.rel = 'stylesheet'; l.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap'; h.appendChild(l);
     })();
   </script>
+  <link rel="preload" as="image" href="/images/hero-la.jpg" fetchpriority="high">
   <link rel="stylesheet" href="/styles.css">
   <script src="/consent.js" defer></script>
 
@@ -118,54 +119,18 @@
 
   <main id="main">
 
-    <section class="hero" aria-labelledby="hero-heading">
+    <section class="hero" aria-labelledby="hero-heading" style="background-image: url('/images/hero-la.jpg');">
       <div class="container">
-        <div class="hero-grid">
-          <div class="hero-content js-reveal">
-            <p class="eyebrow">Technology Consultants</p>
-            <h1 class="heading-display" id="hero-heading">Managed IT<br>for Los&nbsp;Angeles</h1>
-            <p class="lede">Eight IT provides embedded technology consulting for businesses across Los Angeles, Riverside, and Orange counties. We operate as your internal IT team &mdash; handling infrastructure, security, and support so you can focus on your work.</p>
-            <div class="cta-row">
-              <a href="#contact" class="btn btn-primary">
-                Get in touch
-                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-              </a>
-              <a href="#services" class="btn btn-secondary">What we do</a>
-            </div>
-          </div>
-          <div class="hero-visual js-reveal" aria-hidden="true">
-            <svg class="hero-orb" viewBox="0 0 600 600" preserveAspectRatio="xMidYMid meet" focusable="false">
-              <defs>
-                <radialGradient id="orbCoreGrad" cx="50%" cy="42%" r="55%">
-                  <stop offset="0%" stop-color="rgba(255,255,255,0.95)"/>
-                  <stop offset="55%" stop-color="rgba(96, 165, 250, 0.95)"/>
-                  <stop offset="100%" stop-color="rgba(29, 78, 216, 0.92)"/>
-                </radialGradient>
-                <radialGradient id="orbHaloGrad" cx="50%" cy="50%" r="50%">
-                  <stop offset="0%" stop-color="rgba(96, 165, 250, 0.30)"/>
-                  <stop offset="100%" stop-color="rgba(96, 165, 250, 0)"/>
-                </radialGradient>
-              </defs>
-
-              <circle cx="300" cy="300" r="270" class="orb-ring orb-ring-1"/>
-              <circle cx="300" cy="300" r="210" class="orb-ring orb-ring-2"/>
-              <circle cx="300" cy="300" r="150" class="orb-ring orb-ring-3"/>
-              <circle cx="300" cy="300" r="90"  class="orb-ring orb-ring-4"/>
-
-              <circle cx="300" cy="30"  r="6" class="orb-node"/>
-              <circle cx="570" cy="300" r="6" class="orb-node"/>
-              <circle cx="300" cy="570" r="6" class="orb-node"/>
-              <circle cx="30"  cy="300" r="6" class="orb-node"/>
-              <circle cx="448" cy="152" r="5" class="orb-node orb-node-soft"/>
-              <circle cx="152" cy="448" r="5" class="orb-node orb-node-soft"/>
-              <circle cx="406" cy="406" r="4" class="orb-node orb-node-soft"/>
-              <circle cx="194" cy="194" r="4" class="orb-node orb-node-soft"/>
-              <circle cx="404" cy="195" r="4" class="orb-node orb-node-accent"/>
-
-              <circle cx="300" cy="300" r="150" fill="url(#orbHaloGrad)"/>
-              <circle cx="300" cy="300" r="56"  class="orb-core" fill="url(#orbCoreGrad)"/>
-              <circle cx="300" cy="300" r="22"  class="orb-pulse"/>
-            </svg>
+        <div class="hero-content js-reveal">
+          <p class="eyebrow">Technology Consultants</p>
+          <h1 class="heading-display" id="hero-heading">Managed IT<br>for Los&nbsp;Angeles</h1>
+          <p class="lede">Eight IT provides embedded technology consulting for businesses across Los Angeles, Riverside, and Orange counties. We operate as your internal IT team &mdash; handling infrastructure, security, and support so you can focus on your work.</p>
+          <div class="cta-row">
+            <a href="#contact" class="btn btn-primary">
+              Get in touch
+              <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#services" class="btn btn-secondary">What we do</a>
           </div>
         </div>
       </div>
