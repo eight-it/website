@@ -161,6 +161,7 @@ export async function onRequestGet(context) {
     headers: {
       'Content-Type': 'application/json',
       'Cache-Control': 'public, max-age=900',
+      'X-Robots-Tag': 'noindex',
     },
   });
 
