@@ -1,0 +1,61 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Eight IT Status Ticker API",
+    "version": "1.0.0",
+    "description": "Read-only feed aggregating recent IT status notices and security advisories (Cloudflare, CISA, NIST/NVD, Microsoft 365, and threat-intel sources) as shown on the Eight IT homepage ticker. No authentication; cached for 15 minutes.",
+    "contact": {
+      "name": "Eight IT",
+      "email": "info@eightit.com",
+      "url": "https://eightit.com"
+    }
+  },
+  "servers": [{ "url": "https://eightit.com" }],
+  "paths": {
+    "/api/ticker": {
+      "get": {
+        "summary": "Recent IT status and security advisory headlines",
+        "operationId": "getTicker",
+        "responses": {
+          "200": {
+            "description": "An array of ticker items, or null when no items are currently available.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": ["array", "null"],
+                  "items": {
+                    "type": "object",
+                    "required": ["source", "headline", "href"],
+                    "properties": {
+                      "source": {
+                        "type": "string",
+                        "description": "Feed source name, e.g. Cloudflare, CISA, NIST, Microsoft 365."
+                      },
+                      "headline": {
+                        "type": "string",
+                        "description": "Short advisory or status headline (truncated to ~90 characters)."
+                      },
+                      "href": {
+                        "type": "string",
+                        "format": "uri",
+                        "description": "Link to the source item or status page."
+                      },
+                      "time": {
+                        "type": "string",
+                        "description": "Relative time such as 'now', '2h ago', '3d ago', or an ISO date for older items."
+                      },
+                      "cssClass": {
+                        "type": "string",
+                        "description": "Presentation hint used by the homepage widget."
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

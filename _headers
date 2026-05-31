@@ -4,4 +4,7 @@
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()
-  Link: </sitemap.xml>; rel="sitemap", </llms.txt>; rel="llms-txt"
+  Link: </.well-known/api-catalog>; rel="api-catalog", </sitemap.xml>; rel="sitemap", </llms.txt>; rel="llms-txt"
+
+/.well-known/api-catalog
+  Content-Type: application/linkset+json

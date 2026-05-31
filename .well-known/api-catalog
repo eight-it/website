@@ -1,0 +1,19 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://eightit.com/api/ticker",
+      "service-desc": [
+        {
+          "href": "https://eightit.com/.well-known/ticker-openapi.json",
+          "type": "application/json"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://eightit.com/",
+          "type": "text/html"
+        }
+      ]
+    }
+  ]
+}
