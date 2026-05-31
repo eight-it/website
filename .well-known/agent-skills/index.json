@@ -1,0 +1,12 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "eight-it",
+      "type": "skill-md",
+      "description": "Answer questions about Eight IT — embedded IT consulting for Los Angeles, Riverside, and Orange counties, California: services, engagement models, service area, and contact.",
+      "url": "/.well-known/agent-skills/eight-it/SKILL.md",
+      "digest": "sha256:f0880bd79b7f65be8176d380f86ef973959f35c769db0ba9403af84429e314be"
+    }
+  ]
+}

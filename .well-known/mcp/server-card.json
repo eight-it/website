@@ -1,0 +1,26 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/mcp-server-card/v1.json",
+  "version": "1.0",
+  "protocolVersion": "2025-06-18",
+  "serverInfo": {
+    "name": "eightit-mcp",
+    "title": "Eight IT",
+    "version": "1.0.0"
+  },
+  "description": "Read-only information about Eight IT — an embedded IT consulting practice serving Los Angeles, Riverside, and Orange counties, California: services, engagement models, service area, and how to make contact.",
+  "iconUrl": "https://eightit.com/favicon.svg",
+  "documentationUrl": "https://eightit.com",
+  "transport": {
+    "type": "streamable-http",
+    "endpoint": "https://mcp.eightit.com/mcp"
+  },
+  "capabilities": {
+    "tools": {
+      "listChanged": false
+    }
+  },
+  "authentication": {
+    "required": false
+  },
+  "tools": "dynamic"
+}
