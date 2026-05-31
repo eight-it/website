@@ -1,0 +1,22 @@
+# Eight IT
+
+> Eight IT provides embedded technology consulting for businesses across Los Angeles, Riverside, and Orange counties, California. The practice delivers managed IT, security, and on-demand support — acting as an embedded technology partner rather than a break/fix help desk. Contact: info@eightit.com.
+
+## Pages
+
+- [Home](https://eightit.com/): overview of the embedded IT consulting model and who it serves.
+- [Services](https://eightit.com/services): full service catalog (see list below).
+- [Accessibility](https://eightit.com/accessibility): accessibility statement (WCAG 2.1 AA).
+- [Privacy](https://eightit.com/privacy): privacy policy.
+- [Do Not Sell or Share](https://eightit.com/do-not-sell): CCPA/CPRA stance.
+- [Terms](https://eightit.com/terms): terms and conditions.
+
+## Services
+
+Third-Party Vendor Management · VoIP and ISP Management · Asset and Inventory Management · Application Support · Backup Strategy Analysis · Database Administration, Maintenance, and Migration · Data Recovery · Disaster Recovery Planning and Implementation · Emergency On-Demand IT Services · Enterprise Messaging · Managed Firewall Services · Network Optimization, Performance Troubleshooting, and Documentation · Network Infrastructure Design and Analysis · Network Intrusion Detection and Prevention · Office and Data Center Relocation Services · Personalized One-on-One Training · Remote Management and Automated Patch Management · Server Preventive Maintenance, Optimization, Support, and Virtualization · System Administration and End-User Support · Wireless and Wide Area Networking Management
+
+## Facts
+
+- Service area: Los Angeles County, Riverside County, and Orange County, California.
+- Model: embedded technology consulting / managed IT (MSP), security, and on-demand support.
+- Contact: info@eightit.com
