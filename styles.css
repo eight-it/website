@@ -1,13 +1,7 @@
-/* ============================================
-   Eight IT — Design System
-   ============================================ */
-
-/* ---- Reset ---- */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-/* ---- Tokens ---- */
 :root {
-  /* Color — neutrals */
+  
   --gray-50:  #f9fafb;
   --gray-100: #f3f4f6;
   --gray-200: #e5e7eb;
@@ -19,7 +13,7 @@
   --gray-800: #1f2937;
   --gray-900: #111827;
 
-  /* Color — brand */
+  
   --blue-50:  #eff6ff;
   --blue-100: #dbeafe;
   --blue-500: #3b82f6;
@@ -28,7 +22,7 @@
   --blue-800: #1e40af;
   --blue-900: #1e3a8a;
 
-  /* Semantic */
+  
   --fg:        var(--gray-900);
   --fg-muted:  var(--gray-600);
   --fg-subtle: #5b6573;
@@ -46,11 +40,11 @@
   --hero-glow: rgba(29, 78, 216, 0.06);
   --color-scheme: light;
 
-  /* Type */
+  
   --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --font-feature: "cv11", "ss01", "ss03";
 
-  /* Spacing (4px base) */
+  
   --space-1:  0.25rem;
   --space-2:  0.5rem;
   --space-3:  0.75rem;
@@ -65,13 +59,13 @@
   --space-24: 6rem;
   --space-32: 8rem;
 
-  /* Radius */
+  
   --radius-sm: 4px;
   --radius:    8px;
   --radius-md: 12px;
   --radius-lg: 16px;
 
-  /* Shadow */
+  
   --shadow-xs:  0 1px 2px 0 rgba(17, 24, 39, 0.05);
   --shadow-sm:  0 1px 3px 0 rgba(17, 24, 39, 0.08), 0 1px 2px -1px rgba(17, 24, 39, 0.06);
   --shadow:     0 4px 6px -1px rgba(17, 24, 39, 0.08), 0 2px 4px -2px rgba(17, 24, 39, 0.05);
@@ -79,17 +73,16 @@
   --shadow-lg:  0 20px 25px -5px rgba(17, 24, 39, 0.10), 0 8px 10px -6px rgba(17, 24, 39, 0.05);
   --shadow-xl:  0 25px 50px -12px rgba(17, 24, 39, 0.18);
 
-  /* Layout */
+  
   --container-wide: 1200px;
   --container-prose: 720px;
   --header-height: 72px;
 
-  /* Motion */
+  
   --ease: cubic-bezier(0.4, 0, 0.2, 1);
   --duration: 200ms;
 }
 
-/* ---- Dark mode tokens ---- */
 :root[data-theme="dark"] {
   --fg:        var(--gray-100);
   --fg-muted:  #b5bcc9;
@@ -144,7 +137,6 @@
 
 html { color-scheme: var(--color-scheme); }
 
-/* Smooth color transitions when theme is toggled (not on initial paint) */
 .theme-transition,
 .theme-transition *,
 .theme-transition *::before,
@@ -155,7 +147,6 @@ html { color-scheme: var(--color-scheme); }
               box-shadow 250ms var(--ease) !important;
 }
 
-/* ---- Reduced motion ---- */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after {
@@ -170,7 +161,6 @@ html { color-scheme: var(--color-scheme); }
   html { scroll-behavior: smooth; }
 }
 
-/* ---- Base ---- */
 html {
   scroll-padding-top: calc(var(--header-height) + 16px);
 }
@@ -192,7 +182,6 @@ img, svg, video {
   max-width: 100%;
 }
 
-/* ---- A11y utilities ---- */
 .sr-only {
   position: absolute;
   width: 1px; height: 1px;
@@ -229,7 +218,6 @@ img, svg, video {
   border-radius: var(--radius-sm);
 }
 
-/* ---- Layout primitives ---- */
 .container {
   max-width: var(--container-wide);
   margin-inline: auto;
@@ -244,7 +232,6 @@ img, svg, video {
 section { padding-block: var(--space-20); }
 .section-tinted { background: var(--bg-alt); }
 
-/* ---- Header / Nav ---- */
 .site-header {
   position: sticky;
   top: 0;
@@ -364,7 +351,6 @@ section { padding-block: var(--space-20); }
 }
 .menu-toggle:hover { background: var(--bg-alt); }
 
-/* ---- Typography ---- */
 .eyebrow {
   display: inline-flex;
   align-items: center;
@@ -429,7 +415,6 @@ section { padding-block: var(--space-20); }
   line-height: 1.7;
 }
 
-/* ---- Buttons ---- */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -480,7 +465,6 @@ section { padding-block: var(--space-20); }
   border-color: var(--gray-400);
 }
 
-/* ---- Hero ---- */
 .hero {
   position: relative;
   overflow: hidden;
@@ -518,7 +502,6 @@ section { padding-block: var(--space-20); }
   flex-wrap: wrap;
 }
 
-/* Light text inside the hero in both modes — the photo carries its own dark palette */
 .hero .eyebrow { color: #93c5fd; }
 .hero .eyebrow::before { background: #93c5fd; }
 .hero .eyebrow .num { color: rgba(255, 255, 255, 0.55); }
@@ -561,7 +544,6 @@ section { padding-block: var(--space-20); }
   }
 }
 
-/* ---- Status ticker ---- */
 .status-ticker {
   position: relative;
   border-block: 1px solid var(--border);
@@ -664,7 +646,6 @@ section { padding-block: var(--space-20); }
   .status-ticker-track { animation: none; }
 }
 
-/* ---- Services / cards ---- */
 .section-head { margin-bottom: var(--space-12); }
 .section-head .eyebrow { margin-bottom: var(--space-3); }
 .section-head .heading-section { margin-bottom: var(--space-3); }
@@ -721,7 +702,6 @@ section { padding-block: var(--space-20); }
   line-height: 1.65;
 }
 
-/* ---- Approach ---- */
 .split-grid {
   display: grid;
   grid-template-columns: 1fr 1.1fr;
@@ -763,7 +743,6 @@ section { padding-block: var(--space-20); }
   font-size: 0.9375rem;
 }
 
-/* ---- Contact ---- */
 .contact {
   text-align: center;
 }
@@ -780,7 +759,6 @@ section { padding-block: var(--space-20); }
   flex-wrap: wrap;
 }
 
-/* ---- Contact form ---- */
 .contact-form {
   max-width: 520px;
   margin: var(--space-10) auto 0;
@@ -841,7 +819,6 @@ textarea.form-input { resize: vertical; min-height: 120px; }
 .form-status.success { color: #16a34a; }
 .form-status.error   { color: #dc2626; }
 
-/* ---- Consent banner ---- */
 .consent-banner {
   position: fixed;
   left: var(--space-4);
@@ -900,7 +877,6 @@ textarea.form-input { resize: vertical; min-height: 120px; }
   .consent-actions { flex-shrink: 0; }
 }
 
-/* ---- Footer ---- */
 .site-footer {
   padding-block: var(--space-10);
   border-top: 1px solid var(--border);
@@ -934,7 +910,6 @@ textarea.form-input { resize: vertical; min-height: 120px; }
 }
 .footer-meta .region { color: var(--fg-subtle); font-size: 0.8125rem; }
 
-/* ---- Notice / callouts ---- */
 .notice {
   padding: var(--space-4) var(--space-5);
   background: var(--bg-tinted);
@@ -952,7 +927,6 @@ textarea.form-input { resize: vertical; min-height: 120px; }
   :root:not([data-theme="light"]) .notice strong { color: #ffffff; }
 }
 
-/* ---- Download cards (downloads page) ---- */
 .download-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -989,7 +963,6 @@ textarea.form-input { resize: vertical; min-height: 120px; }
   flex-shrink: 0;
 }
 
-/* ---- Help block ---- */
 .help-block {
   margin-top: var(--space-12);
   padding: var(--space-8);
@@ -1001,7 +974,6 @@ textarea.form-input { resize: vertical; min-height: 120px; }
 .help-block p { color: var(--fg-muted); }
 .help-block a { color: var(--accent-text); text-decoration: underline; text-underline-offset: 3px; }
 
-/* ---- Prose page (accessibility, 404) ---- */
 .prose h1 {
   font-size: clamp(2rem, 1.4rem + 2.5vw, 2.75rem);
   font-weight: 800;
@@ -1024,9 +996,6 @@ textarea.form-input { resize: vertical; min-height: 120px; }
 .prose a:not(.btn) { color: var(--accent-text); text-decoration: underline; text-underline-offset: 3px; }
 .prose a:not(.btn):hover { color: var(--accent-hover); }
 
-/* ---- (Reveal-on-load animation removed; .js-reveal is a no-op marker) ---- */
-
-/* ---- Services catalog (services.html) ---- */
 .services-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1061,7 +1030,6 @@ textarea.form-input { resize: vertical; min-height: 120px; }
   .services-list { grid-template-columns: 1fr; }
 }
 
-/* ---- "See more" inline link ---- */
 .see-more-link {
   display: inline-flex;
   align-items: center;
@@ -1084,7 +1052,6 @@ textarea.form-input { resize: vertical; min-height: 120px; }
 }
 .see-more-link:hover .arrow { transform: translateX(3px); }
 
-/* ---- Theme toggle ---- */
 .nav-actions {
   display: flex;
   align-items: center;
@@ -1120,7 +1087,6 @@ textarea.form-input { resize: vertical; min-height: 120px; }
   :root:not([data-theme="light"]) .theme-toggle .icon-moon { display: none; }
 }
 
-/* ---- Scroll-spy active state ---- */
 .nav-links a[data-active],
 .nav-links a[aria-current="page"] {
   color: var(--fg);
@@ -1138,7 +1104,6 @@ textarea.form-input { resize: vertical; min-height: 120px; }
   vertical-align: middle;
 }
 
-/* ---- Scroll progress (subtle, optional) ---- */
 .scroll-progress {
   position: fixed;
   top: 0;
@@ -1152,7 +1117,6 @@ textarea.form-input { resize: vertical; min-height: 120px; }
   transition: transform 80ms linear;
 }
 
-/* ---- Micro-typography polish ---- */
 .lede,
 .body-muted,
 .prose p {
@@ -1166,7 +1130,6 @@ time,
   font-feature-settings: "tnum" 1, "ss01";
 }
 
-/* ---- Dark mode image refinement ---- */
 :root[data-theme="dark"] .media-frame img,
 :root[data-theme="dark"] .hero-image img {
   filter: saturate(0.95) brightness(0.95);
@@ -1178,7 +1141,6 @@ time,
   }
 }
 
-/* ---- Header in dark mode (transparent backdrop) ---- */
 .site-header {
   background: rgba(255, 255, 255, 0.85);
 }
@@ -1191,7 +1153,6 @@ time,
   }
 }
 
-/* ---- Mobile nav surface in dark mode ---- */
 :root[data-theme="dark"] .nav-primary {
   background: rgba(13, 17, 23, 0.97);
 }
@@ -1201,7 +1162,6 @@ time,
   }
 }
 
-/* ---- Mobile ---- */
 @media (max-width: 860px) {
   section { padding-block: var(--space-16); }
   .hero { padding-block: var(--space-20) var(--space-16); }
