@@ -18,7 +18,7 @@ If you're an Eight IT client and you've installed our remote management agent, t
 
 ## Information collected automatically
 
-We don't use analytics software or tracking cookies on this site.
+We use Cloudflare Web Analytics to understand how the site is used, such as which pages are visited. It is cookieless: it sets no cookies, does not track you across other websites, and does not collect any information that identifies you personally. We use no other analytics, and no advertising trackers.
 
 Our hosting provider, Cloudflare, processes web requests as part of delivering the site. Cloudflare may log request metadata such as IP addresses as part of their standard infrastructure operation. See [Cloudflare's privacy policy](https://www.cloudflare.com/privacypolicy/) for details. Hosting is unavoidable for visiting this site.
 
