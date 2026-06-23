@@ -361,6 +361,7 @@ section { padding-block: var(--space-20); }
   text-transform: uppercase;
   color: var(--accent-text);
   font-feature-settings: "tnum" 1, "ss01", "cv11";
+  margin-bottom: var(--space-3);
 }
 .eyebrow::before {
   content: "";
@@ -498,7 +499,7 @@ section { padding-block: var(--space-20); }
   flex-wrap: wrap;
 }
 
-.hero .eyebrow { color: #93c5fd; }
+.hero .eyebrow { color: #93c5fd; margin-bottom: 0; }
 .hero .eyebrow::before { background: #93c5fd; }
 .hero .heading-display { color: #ffffff; }
 .hero .lede { color: rgba(255, 255, 255, 0.88); }
@@ -642,7 +643,6 @@ section { padding-block: var(--space-20); }
 }
 
 .section-head { margin-bottom: var(--space-12); }
-.section-head .eyebrow { margin-bottom: var(--space-3); }
 .section-head .heading-section { margin-bottom: var(--space-3); }
 
 .cards {
