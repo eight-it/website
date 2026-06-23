@@ -26,4 +26,4 @@ For Apple computers running macOS.
 
 ## Need help?
 
-If the installer won't run, you're not sure which version you need, or something else isn't working — get in touch and we'll walk you through it: [info@eightit.com](mailto:info@eightit.com).
+If the installer won't run, you're not sure which version you need, or something else isn't working, get in touch and we'll walk you through it: [info@eightit.com](mailto:info@eightit.com).

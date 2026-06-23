@@ -7,7 +7,7 @@ Services
 # Managed IT, Security & Support  
 for Los Angeles businesses
 
-A full IT department's worth of capability. Whatever your organization needs to keep running — infrastructure, security, support, recovery, training — we handle it. Below is the full catalog of services we offer to clients across Los Angeles, Riverside, and Orange counties.
+A full IT department's worth of capability. Whatever your organization needs to keep running (infrastructure, security, support, recovery, training), we handle it. Below is the full catalog of services we offer to clients across Los Angeles, Riverside, and Orange counties.
 
 ## Service catalog
 
@@ -17,11 +17,11 @@ One point of contact for every technology vendor. We own the relationship, track
 
 ### VoIP and ISP Management
 
-Carrier contracts, provisioning, outages, and day-to-day performance — handled. You make calls; we deal with the providers.
+Carrier contracts, provisioning, outages, and day-to-day performance. Handled. You make calls; we deal with the providers.
 
 ### Asset and Inventory Management
 
-Full tracking of your technology assets and inventory — what you have, where it is, and when it needs replacing.
+Full tracking of your technology assets and inventory: what you have, where it is, and when it needs replacing.
 
 ### Application Support
 
@@ -33,7 +33,7 @@ Expert analysis of your backup strategy across local, site-to-site, and cloud-ba
 
 ### Database Administration, Maintenance, and Migration
 
-Administration, maintenance, and platform migrations for your databases — keeping them healthy and moving them when you need to.
+Administration, maintenance, and platform migrations for your databases, keeping them healthy and moving them when you need to.
 
 ### Data Recovery
 
@@ -73,7 +73,7 @@ Planning and execution of office and data center relocations with minimal disrup
 
 ### Personalized One-on-One Training
 
-Hands-on training tailored to your team and your actual systems — not generic software walkthroughs.
+Hands-on training tailored to your team and your actual systems, not generic software walkthroughs.
 
 ### Remote Management and Automated Patch Management
 
@@ -81,11 +81,11 @@ Remote management and automated OS and third-party patching for servers and work
 
 ### Server Preventive Maintenance, Optimization, Support, and Virtualization
 
-Scheduled maintenance, performance tuning, and virtualization for your server environment — handled before problems surface, not after.
+Scheduled maintenance, performance tuning, and virtualization for your server environment, handled before problems surface, not after.
 
 ### System Administration and End-User Support
 
-Day-to-day system administration and user support — account management, permissions, troubleshooting, and everything else that keeps the environment running.
+Day-to-day system administration and user support: account management, permissions, troubleshooting, and everything else that keeps the environment running.
 
 ### Wireless and Wide Area Networking Management
 

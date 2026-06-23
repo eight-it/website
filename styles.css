@@ -365,15 +365,11 @@ section { padding-block: var(--space-20); }
 .eyebrow::before {
   content: "";
   display: inline-block;
-  width: 24px;
-  height: 2px;
+  width: 8px;
+  height: 8px;
   background: var(--accent-text);
   border-radius: 1px;
-}
-.eyebrow .num {
-  color: var(--fg-subtle);
-  font-weight: 500;
-  margin-right: 2px;
+  transform: rotate(45deg);
 }
 
 .heading-display {
@@ -504,7 +500,6 @@ section { padding-block: var(--space-20); }
 
 .hero .eyebrow { color: #93c5fd; }
 .hero .eyebrow::before { background: #93c5fd; }
-.hero .eyebrow .num { color: rgba(255, 255, 255, 0.55); }
 .hero .heading-display { color: #ffffff; }
 .hero .lede { color: rgba(255, 255, 255, 0.88); }
 .hero .btn-secondary {
