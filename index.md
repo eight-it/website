@@ -13,7 +13,7 @@ Eight IT provides embedded technology consulting for businesses across Los Angel
 
 Services
 
-## Everything you need from IT, nothing you don't.
+## Everything your business needs from IT, nothing it doesn't.
 
 ### Managed IT Consulting
 
