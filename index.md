@@ -15,6 +15,8 @@ Services
 
 ## Everything your business needs from IT, nothing it doesn't.
 
+Ongoing management, security, and on-demand support, scaled to your business, whether on a flat retainer or by the project.
+
 ### Managed IT Consulting
 
 Ongoing infrastructure management, vendor coordination, and strategic technology planning. We embed with your team and handle IT end to end on a flat monthly retainer.
