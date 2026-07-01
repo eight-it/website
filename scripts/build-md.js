@@ -14,6 +14,7 @@ const SITE = "https://eightit.com";
 const PAGES = [
   { html: "index.html", md: "index.md", url: "/" },
   { html: "services.html", md: "services.md", url: "/services" },
+  { html: "compliance.html", md: "compliance.md", url: "/compliance" },
   { html: "accessibility.html", md: "accessibility.md", url: "/accessibility" },
   { html: "privacy.html", md: "privacy.md", url: "/privacy" },
   { html: "do-not-sell.html", md: "do-not-sell.md", url: "/do-not-sell" },

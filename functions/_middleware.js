@@ -6,6 +6,7 @@
 const MD_PAGES = new Set([
   "index",
   "services",
+  "compliance",
   "accessibility",
   "privacy",
   "do-not-sell",

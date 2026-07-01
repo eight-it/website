@@ -6,6 +6,7 @@
 
 - [Home](https://eightit.com/): overview of the embedded IT consulting model and who it serves.
 - [Services](https://eightit.com/services): full service catalog (see list below).
+- [Website Compliance](https://eightit.com/compliance): privacy policy, terms of use, accessibility statement, and WCAG accessibility fixes for small-business websites; flat fee with a documented record of the work.
 - [Accessibility](https://eightit.com/accessibility): accessibility statement (WCAG 2.1 AA).
 - [Privacy](https://eightit.com/privacy): privacy policy.
 - [Do Not Sell or Share](https://eightit.com/do-not-sell): CCPA/CPRA stance.

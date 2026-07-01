@@ -9,6 +9,12 @@ for Los Angeles businesses
 
 A full IT department's worth of capability. Whatever your organization needs to keep running (infrastructure, security, support, recovery, training), we handle it. Below is the full catalog of services we offer to clients across Los Angeles, Riverside, and Orange counties.
 
+## Website Compliance Package
+
+Privacy policy, terms of use, accessibility statement, and WCAG accessibility fixes for small-business websites. Flat fee, documented, no overlay widgets.
+
+[See the compliance package](/compliance)
+
 ## Service catalog
 
 ### Third-Party Vendor Management
