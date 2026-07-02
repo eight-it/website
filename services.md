@@ -9,17 +9,39 @@ for Los Angeles businesses
 
 A full IT department's worth of capability. Whatever your organization needs to keep running (infrastructure, security, support, recovery, training), we handle it. Below is the full catalog of services we offer to clients across Los Angeles, Riverside, and Orange counties.
 
-Featured
+Web & online presence
 
-## Website Compliance Package
+## Your website and the layer around it
 
-Privacy policy, terms of use, accessibility statement, and WCAG accessibility fixes for small-business websites. Flat fee, documented, no overlay widgets.
+We design, build, and look after small-business websites, along with the search, security, and compliance work that keeps them doing their job.
 
-[See the compliance package](/compliance)
+### Website design and development
 
-Catalog
+Fast, accessible, mobile-first websites that you own, whether you need a new one or want the site you have brought up to standard.
 
-## Service catalog
+### Website compliance package
+
+Privacy policy, terms, accessibility statement, and accessibility fixes as a documented flat-fee package. [See the compliance package](/compliance).
+
+### Search visibility (SEO)
+
+Built so search engines can find, understand, and rank your pages. Most small-business sites leave this on the table.
+
+### AI search readiness (AEO)
+
+So AI answer engines like ChatGPT and Google's AI Overviews describe your business correctly instead of guessing or skipping it. Most sites aren't set up for this yet.
+
+### Domain and email security
+
+So your domain can't be impersonated and your email reaches inboxes instead of spam folders. The invisible groundwork most sites never get right.
+
+### Integrations and platforms
+
+Your ordering, booking, payments, and other tools connected so they work as one system, not a pile of disconnected logins.
+
+IT services
+
+## IT and infrastructure
 
 ### Third-Party Vendor Management
 
