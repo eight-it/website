@@ -33,7 +33,7 @@ Deliverables
 
 ### Privacy policy written to your site
 
-Based on what your site actually collects and which platforms it actually uses: your forms, your ordering provider, your analytics. It is written to the privacy laws that reach your customers, starting with California and extending wherever else your business does. Not pasted boilerplate that describes a site you don't have.
+Based on what your site actually collects and which platforms it actually uses: your forms, your ordering provider, your analytics. It is written to the privacy laws that actually apply to you, starting with California and reaching wherever your customers are. Not pasted boilerplate that describes a site you don't have.
 
 ### Third-party tools and consent review
 
@@ -61,13 +61,15 @@ What was checked, what was fixed, what remains. You keep it as your record of go
 
 One thing we don't do: overlay widgets. Products that promise one-line accessibility fixes have not stopped businesses from receiving demand letters, and they often make sites harder to use with assistive technology. We fix the site itself.
 
+What we don't touch: third-party tools embedded on your site, a booking widget, an ordering platform, a CRM, are audited and flagged, not rewritten. We don't alter code we don't control. If one falls short, you get it in writing with the vendor named, so you can take it up with them. Anything past the foundational fixes, deep or custom remediation, is scoped and quoted before we begin, never added to the invoice after the fact.
+
 Eight IT implements and documents your privacy, terms, and accessibility work. We are not a law firm and do not provide legal advice. Where legal judgment is needed, that is your legal team's role, and we conform our work to their requirements.
 
 Process
 
 ## How it works
 
-A full accessibility remediation runs four to eight weeks for a small site, longer for a larger one. The compliance package itself, your privacy policy, terms, accessibility statement, and the foundational accessibility fixes, moves faster: with full access and your details in hand, most small sites are done in about a week. Deeper remediation, if a site needs it, is scoped separately and takes longer. Timing also depends on our availability and how quickly you can hand over logins and details.
+A full accessibility remediation runs four to eight weeks for a small site, longer for a larger one. The compliance package itself (your privacy policy, terms, accessibility statement, and the foundational accessibility fixes) moves faster: with full access and your details in hand, most small sites are done in about a week. Deeper remediation, if a site needs it, is scoped separately and takes longer. Timing also depends on our availability and how quickly you can hand over logins and details.
 
 ### 1\. Send us your site
 
@@ -79,7 +81,7 @@ We identify exactly what's missing and what's fixable, then send you a flat fee 
 
 ### 3\. We implement and document
 
-You give us access and a few business details, we do the work, and you get a written record of what was checked and what was fixed.
+You give us access and a few business details, and we do the work. When it's done, we walk you through what changed and give you a written record of what was checked, what was fixed, and what remains. You end up understanding your own compliance position, not just holding a document.
 
 FAQ
 
@@ -87,7 +89,7 @@ FAQ
 
 ### How long does it take?
 
-The compliance package, your policies, accessibility statement, integration, and foundational fixes, is usually done in about a week once we have full access and your business details. A full accessibility remediation of a small site typically runs four to eight weeks across the industry; if your site needs that depth, we scope it separately and tell you up front. The main variables are our availability and how quickly you can hand over logins and details.
+The compliance package (your policies, accessibility statement, integration, and foundational fixes) is usually done in about a week once we have full access and your business details. A full accessibility remediation of a small site typically runs four to eight weeks across the industry; if your site needs that depth, we scope it separately and tell you up front. The main variables are our availability and how quickly you can hand over logins and details.
 
 ### What do you need from me?
 
