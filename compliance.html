@@ -112,6 +112,8 @@
     </div>
   </header>
 
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
   <main id="main">
 
     <section class="hero" aria-labelledby="compliance-heading" style="background-image: url('/images/hero-la.jpg');">
@@ -126,7 +128,10 @@
 
     <section class="section-tinted" aria-labelledby="exposure-heading">
       <div class="container">
-        <h2 class="heading-section" id="exposure-heading" style="margin-bottom: var(--space-10);">Three gaps most small-business sites have</h2>
+        <div class="section-head">
+          <p class="eyebrow">The problem</p>
+          <h2 class="heading-section" id="exposure-heading">Three gaps most small-business sites have</h2>
+        </div>
         <div class="services-list">
 
           <article class="service-item">
@@ -148,9 +153,12 @@
       </div>
     </section>
 
-    <section aria-labelledby="package-heading" style="padding-block: var(--space-20);">
+    <section aria-labelledby="package-heading">
       <div class="container">
-        <h2 class="heading-section" id="package-heading" style="margin-bottom: var(--space-10);">What we deliver</h2>
+        <div class="section-head">
+          <p class="eyebrow">Deliverables</p>
+          <h2 class="heading-section" id="package-heading">What we deliver</h2>
+        </div>
         <div class="services-list">
 
           <article class="service-item">
@@ -197,8 +205,11 @@
 
     <section class="section-tinted" aria-labelledby="how-heading">
       <div class="container">
-        <h2 class="heading-section" id="how-heading" style="margin-bottom: var(--space-4);">How it works</h2>
-        <p class="lede" style="max-width: 760px; margin-bottom: var(--space-10);">A full accessibility remediation runs four to eight weeks for a small site, longer for a larger one. The compliance package itself, your privacy policy, terms, accessibility statement, and the foundational accessibility fixes, moves faster: with full access and your details in hand, most small sites are done in about a week. Deeper remediation, if a site needs it, is scoped separately and takes longer. Timing also depends on our availability and how quickly you can hand over logins and details.</p>
+        <div class="section-head">
+          <p class="eyebrow">Process</p>
+          <h2 class="heading-section" id="how-heading">How it works</h2>
+          <p class="lede" style="max-width: 760px;">A full accessibility remediation runs four to eight weeks for a small site, longer for a larger one. The compliance package itself, your privacy policy, terms, accessibility statement, and the foundational accessibility fixes, moves faster: with full access and your details in hand, most small sites are done in about a week. Deeper remediation, if a site needs it, is scoped separately and takes longer. Timing also depends on our availability and how quickly you can hand over logins and details.</p>
+        </div>
         <div class="services-list">
 
           <article class="service-item">
@@ -220,9 +231,12 @@
       </div>
     </section>
 
-    <section aria-labelledby="faq-heading" style="padding-block: var(--space-20);">
+    <section aria-labelledby="faq-heading">
       <div class="container-prose prose">
-        <h2 class="heading-section" id="faq-heading" style="margin-bottom: var(--space-10);">Questions</h2>
+        <div class="section-head">
+          <p class="eyebrow">FAQ</p>
+          <h2 class="heading-section" id="faq-heading">Questions</h2>
+        </div>
 
         <h3>How long does it take?</h3>
         <p>The compliance package, your policies, accessibility statement, integration, and foundational fixes, is usually done in about a week once we have full access and your business details. A full accessibility remediation of a small site typically runs four to eight weeks across the industry; if your site needs that depth, we scope it separately and tell you up front. The main variables are our availability and how quickly you can hand over logins and details.</p>
@@ -399,11 +413,17 @@
       });
 
       var header = document.getElementById('site-header');
-      if (header) {
-        var onScroll = function() { header.classList.toggle('scrolled', window.scrollY > 4); };
-        window.addEventListener('scroll', onScroll, { passive: true });
-        onScroll();
-      }
+      var progress = document.getElementById('scroll-progress');
+      var onScroll = function() {
+        if (header) header.classList.toggle('scrolled', window.scrollY > 4);
+        if (progress) {
+          var docH = document.documentElement.scrollHeight - window.innerHeight;
+          var ratio = docH > 0 ? Math.min(window.scrollY / docH, 1) : 0;
+          progress.style.transform = 'scaleX(' + ratio + ')';
+        }
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
 
       var themeToggle = document.getElementById('theme-toggle');
       if (themeToggle) {

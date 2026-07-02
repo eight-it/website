@@ -487,7 +487,7 @@ section { padding-block: var(--space-20); }
   padding-bottom: clamp(5rem, 9vw, 8rem);
   min-height: 580px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 .hero-content { max-width: 640px; }
 .hero-content > * + * { margin-top: var(--space-6); }
@@ -643,7 +643,8 @@ section { padding-block: var(--space-20); }
 }
 
 .section-head { margin-bottom: var(--space-12); }
-.section-head .heading-section { margin-bottom: var(--space-3); }
+.section-head .heading-section { margin-top: 0; margin-bottom: var(--space-3); }
+.section-head .eyebrow { margin: 0 0 var(--space-3); }
 
 .cards {
   display: grid;

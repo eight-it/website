@@ -115,6 +115,8 @@
     </div>
   </header>
 
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
   <main id="main" class="container-prose" style="padding-block: var(--space-16) var(--space-24);">
     <p class="eyebrow" style="margin-bottom: var(--space-3);">Downloads</p>
     <h1 class="heading-display" style="font-size: clamp(2rem, 1.4rem + 2.5vw, 2.75rem); margin-bottom: var(--space-3);">Remote management agent</h1>
@@ -219,11 +221,17 @@
       });
 
       var header = document.getElementById('site-header');
-      if (header) {
-        var onScroll = function() { header.classList.toggle('scrolled', window.scrollY > 4); };
-        window.addEventListener('scroll', onScroll, { passive: true });
-        onScroll();
-      }
+      var progress = document.getElementById('scroll-progress');
+      var onScroll = function() {
+        if (header) header.classList.toggle('scrolled', window.scrollY > 4);
+        if (progress) {
+          var docH = document.documentElement.scrollHeight - window.innerHeight;
+          var ratio = docH > 0 ? Math.min(window.scrollY / docH, 1) : 0;
+          progress.style.transform = 'scaleX(' + ratio + ')';
+        }
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
 
       var themeToggle = document.getElementById('theme-toggle');
       if (themeToggle) {

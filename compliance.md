@@ -9,6 +9,8 @@ legal requirements
 
 If your site has a contact form, online ordering, or a booking page, California expects more from it than most owners realize. We bring small-business websites up to standard (privacy policy, terms, accessibility) and give you a documented record of the work.
 
+The problem
+
 ## Three gaps most small-business sites have
 
 ### No posted privacy policy
@@ -22,6 +24,8 @@ In California, a business with a physical location can face an accessibility cla
 ### The layer nobody owns
 
 Most small-business web presences are assembled from parts: a designer builds the marketing site, a platform handles the ordering or booking. Each assumes someone else handled the legal pages. Usually nobody did, and the gap sits on your domain, under your business name.
+
+Deliverables
 
 ## What we deliver
 
@@ -57,6 +61,8 @@ One thing we don't do: overlay widgets. Products that promise one-line accessibi
 
 Eight IT implements and documents your privacy, terms, and accessibility work. We are not a law firm and do not provide legal advice. Where legal judgment is needed, that is your legal team's role, and we conform our work to their requirements.
 
+Process
+
 ## How it works
 
 A full accessibility remediation runs four to eight weeks for a small site, longer for a larger one. The compliance package itself, your privacy policy, terms, accessibility statement, and the foundational accessibility fixes, moves faster: with full access and your details in hand, most small sites are done in about a week. Deeper remediation, if a site needs it, is scoped separately and takes longer. Timing also depends on our availability and how quickly you can hand over logins and details.
@@ -72,6 +78,8 @@ We identify exactly what's missing and what's fixable, then send you a flat fee 
 ### 3\. We implement and document
 
 You give us access and a few business details, we do the work, and you get a written record of what was checked and what was fixed.
+
+FAQ
 
 ## Questions
 
