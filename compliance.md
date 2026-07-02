@@ -27,7 +27,11 @@ Most small-business web presences are assembled from parts: a designer builds th
 
 ### Privacy policy written to your site
 
-Based on what your site actually collects and which platforms it actually uses: your forms, your ordering provider, your analytics. Not pasted boilerplate that describes a site you don't have.
+Based on what your site actually collects and which platforms it actually uses: your forms, your ordering provider, your analytics. It is written to the privacy laws that reach your customers, starting with California and extending wherever else your business does. Not pasted boilerplate that describes a site you don't have.
+
+### Third-party tools and consent review
+
+We inventory the outside services your site relies on: your ordering or booking platform, analytics, live chat, and anything that records visitor sessions. Each gets reflected in your privacy policy and consent posture, because how California treats these tools is shifting. We add a cookie or consent notice only where your site actually warrants one, never a reflexive banner, and we flag any service that should have a data processing agreement in place for your legal team to handle.
 
 ### Terms of use
 
@@ -90,6 +94,14 @@ No, and anyone who promises that is selling something. What we provide is real f
 ### Do you use an accessibility overlay or widget?
 
 No. Overlay widgets have not stopped businesses from receiving demand letters, and they often make sites harder to use with assistive technology. We fix the site itself.
+
+### What about chat widgets, analytics, and tracking tools?
+
+They're part of the review. How websites use live chat, analytics, and session-recording tools has become an active area of California privacy litigation, so we check what your site runs, make sure your privacy policy and consent posture reflect it, and flag anything that needs your attorney's attention. We implement and document; the legal calls stay with your legal team.
+
+### Do you handle customers outside California?
+
+Yes. Your privacy policy is written to wherever your customers actually are. If you take online orders, ship, or sell gift cards to people in other states or overseas, that can bring other privacy laws into play, including the EU's GDPR for customers in Europe. We reflect what applies to your business and flag anything that needs your attorney's attention.
 
 ### What does it cost?
 
