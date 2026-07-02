@@ -9,6 +9,8 @@ legal requirements
 
 If your site has a contact form, online ordering, or a booking page, California expects more from it than most owners realize. We bring small-business websites up to standard (privacy policy, terms, accessibility) and give you a documented record of the work.
 
+[Find out where your site stands](#contact) [What we deliver](#package-heading)
+
 The problem
 
 ## Three gaps most small-business sites have
