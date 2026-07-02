@@ -43,7 +43,7 @@ A public commitment with a working feedback channel, so visitors who hit a barri
 
 ### Accessibility scan and fixes
 
-We test every page against the WCAG 2.2 AA success criteria using both automated testing and manual review, the way professional auditors work, fix what is fixable within your platform, and tell you plainly what remains. Larger remediation is quoted separately, only if testing warrants it.
+We test every page against the WCAG 2.2 AA success criteria using both automated testing and manual review, fix what is fixable within your platform, and tell you plainly what remains. Larger remediation is quoted separately, only if testing warrants it.
 
 ### Integration on every page
 
