@@ -15,13 +15,17 @@ Web & online presence
 
 We design, build, and look after small-business websites, along with the search, security, and compliance work that keeps them doing their job.
 
-### Website design and development
-
-Fast, accessible, mobile-first websites that you own, whether you need a new one or want the site you have brought up to standard.
+Featured
 
 ### Website compliance package
 
-Privacy policy, terms, accessibility statement, and accessibility fixes as a documented flat-fee package. [See the compliance package](/compliance).
+Privacy policy, terms, accessibility statement, and accessibility fixes for small-business sites, delivered as a documented flat-fee package. No overlay widgets.
+
+[See the compliance package](/compliance)
+
+### Website design and development
+
+Fast, accessible, mobile-first websites that you own, whether you need a new one or want the site you have brought up to standard.
 
 ### Search visibility (SEO)
 
